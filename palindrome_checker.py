@@ -18,7 +18,7 @@ def palindrome_test(string: str):
 
             if not str(character).isalpha():
                 print(f"{string.title()} is not acceptable. Please input a string without characters or digits.")
-                break
+                return False
 
             else:
 
