@@ -20,3 +20,4 @@ class TestPalindrome(unittest.TestCase):
         self.assertEqual(False, palindrome_test("Racecar123"))
         self.assertEqual(False, palindrome_test(""))
         self.assertEqual(False, palindrome_test("123racecar"))
+        self.assertEqual(False, palindrome_test("i1racecar1i"))
