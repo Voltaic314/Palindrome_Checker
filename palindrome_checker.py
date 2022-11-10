@@ -14,23 +14,21 @@ def palindrome_test(string: str):
 
     if string:
 
-        for character in lower_case_string:
+        if not string.isalpha():
+            print(f"{string.title()} is not acceptable. Please input a string without characters or digits.")
+            return False
 
-            if not str(character).isalpha():
-                print(f"{string.title()} is not acceptable. Please input a string without characters or digits.")
-                return False
+        else:
+
+            # This is the part of the code that reverses the string.
+            # After reversing the string, make sure it's the same as the original lower case enforced string.
+            if lower_case_string[::-1] == lower_case_string:
+                print(f"{string.title()} is a palindrome.")
+                return True
 
             else:
-
-                # This is the part of the code that reverses the string.
-                # After reversing the string, make sure it's the same as the original lower case enforced string.
-                if lower_case_string[::-1] == lower_case_string:
-                    print(f"{string.title()} is a palindrome.")
-                    return True
-
-                else:
-                    print(f"{string.title()} is not a palindrome.")
-                    return False
+                print(f"{string.title()} is not a palindrome.")
+                return False
 
     else:
         print("String argument can not be empty. Please run this function again with a non empty string.")
